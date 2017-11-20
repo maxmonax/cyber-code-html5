@@ -8,7 +8,7 @@
   const DELTA_W = MAX_WIDTH - MIN_WIDTH;
   const CLR = 0xc98944;
 
-	export class MainMenu extends Phaser.State {
+  export class MainMenu extends Phaser.State {
     private nodes = [];
     private canvas: Phaser.Graphics;
 
@@ -18,7 +18,7 @@
       };
 
       this.canvas = this.game.add.graphics(0, 0);
-		}
+    }
 
     update() {
       var dt = this.game.time.elapsed * 0.001;
@@ -32,7 +32,7 @@
       // draw head
       this.canvas.beginFill(CLR, 1);
       this.canvas.drawCircle(headX, headY, MAX_WIDTH);
-      
+
       // draw tail
       this.canvas.moveTo(headX, headY);
       for (var i = 1; i < TAILS_CNT; i++) {
@@ -46,9 +46,9 @@
       }
 
       this.canvas.endFill();
-    
+
     }
 
-	}
+  }
 
 }
