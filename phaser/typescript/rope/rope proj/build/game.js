@@ -519,14 +519,7 @@ var PhaserGame;
                 var l_star = new Client.LoadingStars(this.game, Config.GW / 2, Config.GH / 2);
                 l_star.scale.set(1.5);
                 this.dummyLoader.addChild(l_star);
-                this.load.atlasJSONArray('game', './assets/atlases/game.png', './assets/atlases/game.json');
                 SndMng.init(this.game, true);
-                var sndFiles = SndMng.LOAD_SOUNDS;
-                for (var i = 0; i < sndFiles.length; i++) {
-                    var mp3 = './assets/audio/' + sndFiles[i] + '.mp3';
-                    this.load.audio(sndFiles[i], [mp3]);
-                    this.soundsLoading.push(sndFiles[i]);
-                }
             };
             Preloader.prototype.create = function () {
                 this.soundsDecodeWaiting = true;
