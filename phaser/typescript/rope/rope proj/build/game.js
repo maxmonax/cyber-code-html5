@@ -33,10 +33,10 @@ window.onload = function () {
 var Config;
 (function (Config) {
     Config.DOM_PARENT_ID = 'game';
-    Config.GW = 600;
-    Config.GH = 800;
-    Config.GSW = 600;
-    Config.GSH = 800;
+    Config.GW = 300;
+    Config.GH = 400;
+    Config.GSW = 300;
+    Config.GSH = 400;
     Config.FPS = 12;
 })(Config || (Config = {}));
 var DB;
