@@ -33,10 +33,10 @@ window.onload = function () {
 var Config;
 (function (Config) {
     Config.DOM_PARENT_ID = 'game';
-    Config.GW = 300;
-    Config.GH = 400;
-    Config.GSW = 300;
-    Config.GSH = 400;
+    Config.GW = 600;
+    Config.GH = 800;
+    Config.GSW = 600;
+    Config.GSH = 800;
     Config.FPS = 12;
 })(Config || (Config = {}));
 var DB;
@@ -431,7 +431,7 @@ var PhaserGame;
                 this.load.atlasJSONArray('loading', './assets/atlases/loading.png', './assets/atlases/loading.json');
             };
             Boot.prototype.create = function () {
-                this.stage.setBackgroundColor(0x5e3425);
+                this.stage.setBackgroundColor(0x2A5C60);
                 this.input.maxPointers = 1;
                 this.stage.disableVisibilityChange = true;
                 ScaleManager.init(this.game, Config.DOM_PARENT_ID, Config.GW, Config.GH, Config.GSW, Config.GSH);
@@ -458,10 +458,10 @@ var PhaserGame;
     (function (Client) {
         var TAIL_LEN = 1;
         var TAILS_CNT = 400;
-        var MAX_WIDTH = 5;
-        var MIN_WIDTH = 1;
+        var MAX_WIDTH = 10;
+        var MIN_WIDTH = 2;
         var DELTA_W = MAX_WIDTH - MIN_WIDTH;
-        var CLR = 0xc98944;
+        var CLR = 0x67E6F2;
         var MainMenu = (function (_super) {
             __extends(MainMenu, _super);
             function MainMenu() {
@@ -491,7 +491,7 @@ var PhaserGame;
                         x: this.nodes[i - 1].x + TAIL_LEN * Math.cos(nodeAngle),
                         y: this.nodes[i - 1].y + TAIL_LEN * Math.sin(nodeAngle)
                     };
-                    this.canvas.lineStyle(MAX_WIDTH - DELTA_W * i / TAILS_CNT, 0xc98944, 1);
+                    this.canvas.lineStyle(MAX_WIDTH - DELTA_W * i / TAILS_CNT, CLR, 1);
                     this.canvas.lineTo(this.nodes[i].x, this.nodes[i].y);
                 }
                 this.canvas.endFill();

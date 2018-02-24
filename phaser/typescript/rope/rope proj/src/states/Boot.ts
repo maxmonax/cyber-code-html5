@@ -6,7 +6,7 @@
 		}
 		
 		create() {
-      this.stage.setBackgroundColor(0x5e3425);
+      this.stage.setBackgroundColor(0x2A5C60);
 			this.input.maxPointers = 1;
 			// если true то игра старается не останавливаться теряя фокус
 			this.stage.disableVisibilityChange = true;
